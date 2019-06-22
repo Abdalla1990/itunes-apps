@@ -9,6 +9,10 @@ export const buildAppsDataProps = ({ results = [] }) => search => pipe(
 	),
 )(results);
 
+const formatDate = date => {
+	const oldformat = new Date(date);
+	return (`${oldformat.getMonth() + 1}` +' / '+ `${oldformat.getDay()} `+ ' / ' + `${oldformat.getFullYear()}`);
+}
 export const fetchAppPayload = ( { appId: id}, { appsData } ) => { 
 	if( appsData.length === 0 ) {
 		return undefined;
@@ -20,7 +24,7 @@ export const fetchAppPayload = ( { appId: id}, { appsData } ) => {
 	const appDetailsFields = [
 		{
 			field: 'Release Date',
-			value: releaseDate,
+			value: formatDate(releaseDate),
 		},
 		{
 			field: 'App Type',

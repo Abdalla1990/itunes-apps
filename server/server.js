@@ -14,7 +14,6 @@ app.get('/fetchAppsList', (req, res)=> {
   
   const cashedlist = getCache('appsList');
   if( cashedlist !== undefined ) {
-    console.log(' i am inside');
     return res.status(200).send(cashedlist);
   }
   
