@@ -1,0 +1,80 @@
+// plp stands for products listing page 
+.c-plp-container {
+    display: flex;
+    min-width: 100%;
+    @include media('<tablet') {
+        flex-direction: column
+    }
+}
+
+.c-plp-products_wrapper {
+    width: 70%;
+    min-width: 70%;
+    padding-left: 7%;
+    padding-top: 3%;
+    @include media('<tablet') {
+        width: 100%;
+        padding-left: 0;
+    }
+}
+
+.c-plp-products-container {
+    width: 100%;
+    min-width: 100%;
+    min-height: 425px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .c-plp-product-container {
+        width: 18%;
+        padding: 15px 20px;
+        @include media('<tablet') {
+            width: 35%;
+        }
+    }
+}
+
+.c-plp-product-image {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 15px;
+    padding-bottom: 15px;
+    opacity: 1;
+    cursor: pointer;
+    transition: 350ms opacity ease-in-out;
+    &:hover {
+        transition: 350ms opacity ease-in-out;
+        opacity: 0.5;
+    }
+    .c-plp-product-image_source {
+        width: 100%;
+    }
+}
+
+.c-plp-product-title {
+    padding-bottom: 5px;
+    white-space: nowrap;
+    font-size: 12px;
+    h2 {
+        font-size: 15px;
+    }
+    @include media('<tablet') {
+        font-size: 10px;
+    }
+}
+
+.c-plp-product-tags_container {
+    display: flex;
+    flex-wrap: wrap;
+    p,
+    a {
+        font-size: 10px;
+        margin: 1px;
+        background: #6d6d6d;
+        border-radius: 4px;
+        padding: 3px;
+        color: white;
+        white-space: nowrap;
+    }
+}

@@ -1,0 +1,53 @@
+// pdp stands for product details page 
+.c-pdp-container {
+    width: 100%;
+    min-height: 425px;
+}
+
+.c-pdp-inner {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: $white;
+    .c-pdp-product-title {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+.c-pdp-content-container {
+    display: flex;
+    flex-direction: row;
+    @include media('<tablet') {
+        flex-direction: column
+    }
+    width: 100%;
+    justify-content: space-between;
+    .c-pdp-image-container {
+        width: 40%;
+        @include media('<tablet') {
+            width: 100%;
+            order: 1;
+        }
+    }
+    .c-pdp-product-info-container {
+        width: 50%;
+        @include media('<tablet') {
+            width: 100%;
+            order: 2;
+        }
+        .c-pdp-product-fields_container {
+            display: flex;
+            justify-content: space-between;
+            .c-pdp-product-field {
+                font-size: 15px;
+                margin: 0;
+            }
+            .c-pdp-product-value {
+                font-weight: 300;
+                font-size: 12px;
+                margin: 0;
+            }
+        }
+    }
+}

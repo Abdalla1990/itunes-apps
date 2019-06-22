@@ -1,0 +1,115 @@
+input,
+textarea,
+button,
+submit {
+    border: none;
+    appearance: none;
+    outline: none;
+}
+
+input {
+    // font-family: $font-family-primary;
+    // letter-spacing: 0.3vh;
+    background-color: unset;
+    color: $black;
+}
+
+a:link {
+    text-decoration: none;
+    color: $black;
+}
+
+a:visited {
+    text-decoration: none;
+    color: $black;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+    color: $black;
+}
+
+a::selection {
+    text-decoration: none;
+    color: $black;
+}
+
+body {
+    background-color: $gray-light;
+    color: $font-color-body;
+    font-weight: $font-weight-base;
+    font-size: $font-size-base;
+    font-family: 'Open Sans Condensed', sans-serif;
+    width: 100%;
+    letter-spacing: 0.1rem;
+    line-height: 1.7em;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: hidden;
+}
+
+button {
+    cursor: pointer;
+    // user-select: none;
+}
+
+button:disabled {
+    cursor: default;
+}
+
+.error-container {
+    color: red;
+    margin-top: 15px;
+    text-align: center;
+    padding: 15px;
+}
+
+.app-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.component-container {
+    max-width: 1200px;
+    @include media(">=desktop") {
+        padding: 0 80px 0 80px;
+    }
+    @include media(">phone") {
+        padding: 0 70px 0 70px;
+    }
+    @include media("<tablet") {
+        padding: 0 30px 0 30px;
+    }
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-size: 1.9vw;
+    letter-spacing: 1px;
+    margin: 0;
+    @include media("<desktop") {
+        font-size: 2.5vw;
+    }
+    @include media("<tablet") {
+        font-size: 4.8vw;
+    }
+}
+
+a,
+p {
+    font-size: 1.15vw;
+    letter-spacing: 1px;
+    @include media("<desktop") {
+        font-size: 2.5vw;
+    }
+    @include media("<tablet") {
+        font-size: 3.8vw;
+    }
+}

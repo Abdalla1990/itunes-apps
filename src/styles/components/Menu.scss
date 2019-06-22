@@ -1,0 +1,45 @@
+.c-menu-container {
+    background-color: $gray-dark;
+    width: 100%;
+    border-bottom: 1px solid darken($color: $gray, $amount: 20);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 0px 20px 0px;
+    position: relative;
+    a {
+        color: $gray;
+    }
+}
+
+.c-logo {
+    width: 10%;
+    img {
+        width: 100%;
+    }
+}
+
+.c-menu-search__container {
+    width: 10px;
+    .c-header_svg {
+        color: $blue;
+        width: 20px;
+    }
+}
+
+.c-menu-wrapper {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1.25vw;
+    letter-spacing: 1px;
+    font-weight: 700;
+    color: $gray;
+}
+
+.category-container {
+    cursor: pointer;
+    display: flex;
+}

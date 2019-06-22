@@ -1,0 +1,104 @@
+.c-header {
+    background-color: $gray-dark;
+    color: $font-color-header;
+    font-size: $font-size-base;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 32px;
+    z-index: 60;
+}
+
+.c-header.black {
+    background-color: $black;
+    height: 60px;
+    font-weight: 100;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.c-header_container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+    @include media('<tablet') {
+        width: 100%;
+    }
+}
+
+.c-header_svg {
+    width: 15px;
+    height: auto;
+    padding: 0 3px;
+}
+
+.c-header_account--container {
+    >:not(:last-child) {
+        display: none;
+    }
+    @include media('<tablet') {
+        width: 17%;
+        justify-content: flex-start;
+    }
+}
+
+.c-header_contact--container {
+    position: relative;
+    @include media('<tablet') {
+        width: 77%;
+        justify-content: space-around;
+    }
+}
+
+.c-header_account--container,
+.c-header_contact--container {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    // justify-content: space-between;
+    img {
+        color: $font-color-header;
+    }
+    li {
+        cursor: pointer;
+        display: flex;
+        div {
+            opacity: 1;
+            transition: opacity 1s ease-in-out;
+            &:hover {
+                transition: opacity 1s ease-in-out;
+                opacity: 0.4;
+            }
+            font-size: 13px;
+            letter-spacing: 1px;
+            @include media('<tablet') {
+                font-size: 12px;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+.c-header-cart-count {
+    position: absolute;
+    background: #a46497;
+    color: $white;
+    border-radius: 50%;
+    width: 13px;
+    text-align: center;
+    vertical-align: middle;
+    top: 0;
+    left: 77%;
+    >p {
+        width: 13px;
+        height: 18px;
+        margin: 0;
+        font-size: 10px;
+        padding: 0;
+        text-align: center;
+        vertical-align: middle;
+        margin-top: -5px;
+    }
+}
