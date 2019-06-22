@@ -25,7 +25,6 @@ const AppRouter = ({ dispatch }) =>  {
             </Switch>
           </div>
           <Footer />
-          <div className="c-header black"> CopyRight - Paid Apps | All Right Reserved </div>
       </div>
   </Router>
   
