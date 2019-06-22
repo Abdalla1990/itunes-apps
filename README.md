@@ -23,23 +23,21 @@ In package.json :
 
 1- `git clone` the repo
 
-2- `cd` to `PaidApps` 
+2- run `npm install` to install the `node_modules` NOTE: you might get an error `node-sass not found` please install it separately 
 
-3- run `npm install` to install the `node_modules` NOTE: you might get an error `node-sass not found` please install it separately 
-
-4- run `npm run start` to start the server, this will prepare the build of the front end and serve you the app on `http://localhost:3000/` 
+3- run `npm run start` to start the server, this will prepare the build of the front end and serve you the app on `http://localhost:3000/` 
 
 ### alternitavely : 
 
 
 ###### if you want to load only the front-end 'no Data will load' : 
 
-5- run `npm run dev-server` 
+4- run `npm run dev-server` 
 
 ###### if you want to make a development build , run it on "express"(the backend) : 
 
-6- run `npm run build:dev` and then `npm run hotload-api` or `npm run start` 
+5- run `npm run build:dev` and then `npm run hotload-api` or `npm run start` 
 
 ###### if you want to make a deployment build : 
 
-7- run `npm run build:prod` 
+6- run `npm run build:prod` 
