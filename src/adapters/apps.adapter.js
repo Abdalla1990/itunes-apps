@@ -17,7 +17,13 @@ export const fetchAppPayload = ( { appId: id}, { appsData } ) => {
 	if( appsData.length === 0 ) {
 		return undefined;
 	}
-	const  { name, artworkUrl100, releaseDate, kind, genres, artistName, artistUrl, url }  = appsData && appsData.results && appsData.results.length && find( propEq('id', id) )(appsData.results);
+
+	if(find( propEq('id', id) )(appsData.results) === undefined){
+		return undefined;
+	}
+
+	const  { name, artworkUrl100, releaseDate, kind, genres, artistName, artistUrl, url }  = 
+		appsData && appsData.results && appsData.results.length && find( propEq('id', id) )(appsData.results);
 	const appName = name;
 	const appImage= artworkUrl100;
 	const appGenres = genres;

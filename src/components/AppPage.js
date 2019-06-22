@@ -38,8 +38,7 @@ const RenderContent = ( { appName , appDetailsFields, appImage, appGenres} ) => 
   </div>
 );
 
-const AppPage = (props) => {
-  console.log({ appDetails });
+const AppPage = props => {
   const appDetails = useSelector(state => fetchAppPayload(props.match.params, state))
   return ( 
     <div className="c-pdp-container">

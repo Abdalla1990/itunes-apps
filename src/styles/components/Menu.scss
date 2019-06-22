@@ -5,7 +5,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
     padding: 20px 0px 20px 0px;
     position: relative;
     a {
@@ -32,14 +31,13 @@
     display: flex;
     width: 50%;
     align-items: center;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: space-between;
     font-size: 1.25vw;
     letter-spacing: 1px;
     font-weight: 700;
     color: $gray;
-}
-
-.category-container {
-    cursor: pointer;
-    display: flex;
+    >:last-child {
+        padding-top: 20px;
+    }
 }
