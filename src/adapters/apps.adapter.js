@@ -1,7 +1,8 @@
 import { map, filter, find, propEq, pipe } from 'ramda';
 
+const checkLength = arg => arg.length > 20 ? arg.slice(0, 20) + '...' : arg;
 export const buildAppsDataProps = ({ results = [] }) => search => pipe(
-	map(({ id, name, genres, artworkUrl100: image }) =>({ id, name, genres, image }) ),
+	map(({ id, name, genres, artworkUrl100: image }) =>({ id, name: checkLength(name), genres, image }) ),
 	filter( app => 
 		app.genres !== undefined  && app.genres.length && search !== "" ?
 		find(genre => genre.name && genre.name.toLowerCase().indexOf(search.toLowerCase()) !== -1)(app.genres) :
