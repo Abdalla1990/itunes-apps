@@ -6,7 +6,6 @@ import AppsListItem from './AppsListItem';
 const HomePage = ({ history }) => {
 
   const apps = useSelector( ({ appsData = { results : [] } , search}) => buildAppsDataProps(appsData)(search));
-
   const handleProductClick = app => {
     history.push(`/apps/${app.id}`);
   }
