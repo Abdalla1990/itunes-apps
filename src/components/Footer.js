@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Menu = () => (
+const Footer = () => (
   <div className="c-footer-container">
   </div>
 )
-export default Menu;
+export default Footer;

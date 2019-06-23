@@ -17,12 +17,9 @@ app.get('/fetchAppsList', (req, res)=> {
     return res.status(200).send(cashedlist);
   }
   
-
-  Promise.all([
-    fetchAppsList()
-  ]).then((response) => {
-    const appsList = response[0].data.feed;
-    if ( response[0].status !== 200 ) {
+  fetchAppsList().then((response) => {
+    const appsList = response.data.feed;
+    if ( response.status !== 200 ) {
       return res.status(500).send(' something went wrong ');
     }
     
@@ -41,5 +38,5 @@ app.get('/*', (req, res) => {
 
 
 app.listen(port, () => {
-    console.log(`api is running on ${port} go to http://localhost:8080/ to if you runned 'npm run dev_api' `);
+    console.log(`api is running on ${port} go to http://localhost:8080/ if you runned 'npm run dev_api' `);
 })

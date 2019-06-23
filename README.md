@@ -17,7 +17,7 @@ In package.json :
 | -------------------- | ------ |
 | hotload-api | loads the api and watches for changes 'make sure u have nodemone installed'
 | start | prepares the dev build and starts the node server 'no hot reload'
-| dev-server | loads the front-end ONLY , no interaction withthe api|
+| dev-server | loads the front-end ONLY , no interaction with the api|
 | dev_api | loads the front-end and the backend and watches for changes on both 'this might through Error: listen EADDRINUSE :::3000 sometime but it won't block the processes' CURRENTLY UNSTABLE|
 | build:dev | prepares a build bundle.js file
 | build:dev | prepares a bundle.js.map file for deployment
@@ -25,7 +25,7 @@ In package.json :
 
 1- `git clone` the repo
 
-2- run `npm install` to install the `node_modules` NOTE: you might get an error `node-sass not found` please install it separately 
+2- run `npm install` to install the `node_modules` NOTE: you might get an error `node-sass not found` please install it separately `npm install node-sass` 
 
 3- run `npm run start` to start the server, this will prepare the build of the front end and serve you the app on `http://localhost:3000/` 
 
