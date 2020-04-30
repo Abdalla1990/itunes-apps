@@ -28,7 +28,7 @@
         "css-loader": "0.28.4",
         "image-webpack-loader": "^3.4.2",
         "include-media": "^1.4.9",
-        "jquery": "^3.4.1",
+        "jquery": "^3.5.0",
         "node-cache": "^4.2.0",
         "node-sass": "4.5.3",
         "normalize.css": "7.0.0",
